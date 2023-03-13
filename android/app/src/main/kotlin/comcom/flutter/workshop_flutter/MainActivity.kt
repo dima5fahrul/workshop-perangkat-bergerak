@@ -1,4 +1,4 @@
-package com.example.project_workshop
+package comcom.flutter.workshop_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 

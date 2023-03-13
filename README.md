@@ -1,4 +1,4 @@
-# project_workshop
+# workshop_flutter
 
 A new Flutter project.
 
