@@ -5,8 +5,8 @@ import 'package:workshop_flutter/app/data/models/tourism_place.dart';
 
 import '../controllers/pekan3_controller.dart';
 
-class Pekan3View extends GetView<Pekan3Controller> {
-  const Pekan3View({Key? key}) : super(key: key);
+class LatihanPekan3 extends GetView<Pekan3Controller> {
+  const LatihanPekan3({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class Pekan3View extends GetView<Pekan3Controller> {
         itemBuilder: (context, index) {
           final TourismPlace place = tourismPlaceList[index];
           return InkWell(
-            onTap: () => Get.toNamed('/detail', arguments: place),
+            onTap: () => Get.toNamed('/latihan-detail', arguments: place),
             child: listItem(place),
           );
         },
