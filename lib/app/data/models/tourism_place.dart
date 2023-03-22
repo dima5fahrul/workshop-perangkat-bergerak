@@ -27,7 +27,6 @@ var tourismPlaceList = [
     imageAsset: 'assets/profiles/martin_garrix.jpg',
     description:
         'Rotterdam-born Oliver Heldens experienced his rise to fame at a very young age; enjoying a UK number 1 single at the tender age of 19 with `Gecko (Overdrive)` featuring the vocals of Becky Hill, and it`s been all systems go since then. His music continues to storm the charts, with hits like `Deja Vu` featuring Anabel Englund and a big room version of `Another Chance` alongside Roger Sanchez both released last year, and thanks to his various aliases he`s an artist who successfully bridges the mainstream and the underground.',
-    // galery array
     galery: [
       'assets/images/martin-garrix1.jpg',
       'assets/images/martin-garrix2.jpg',
@@ -161,5 +160,3 @@ var tourismPlaceList = [
     ],
   ),
 ];
-
-

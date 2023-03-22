@@ -1,14 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
-class Pekan3DetailView extends GetView {
-  const Pekan3DetailView({Key? key}) : super(key: key);
+import 'package:get/get.dart';
+import 'package:workshop_flutter/app/data/models/tourism_place.dart';
+
+class PercobaanDetailView extends GetView {
+  const PercobaanDetailView({Key? key, required this.place}) : super(key: key);
+  final TourismPlace place;
 
   @override
   Widget build(BuildContext context) {
-    var place = Get.arguments;
-
     List<Widget> imageSliders = [
       for (var i = 0; i < place.galery.length; i++)
         Container(

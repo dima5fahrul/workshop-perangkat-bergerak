@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
+
 import 'package:get/get.dart';
-import 'package:workshop_flutter/app/modules/pekan3/views/latihan_detail_view.dart';
-import 'package:workshop_flutter/app/modules/pekan3/views/latihan_view.dart';
-import 'package:workshop_flutter/app/modules/pekan3/views/percobaan_detail_view.dart';
-import 'package:workshop_flutter/app/modules/pekan3/views/percobaan_view.dart';
+import 'package:workshop_flutter/app/modules/pekan4/views/done_tourism_place_view.dart';
+import 'package:workshop_flutter/app/modules/pekan4/views/percobaan_detail_view.dart';
+import 'package:workshop_flutter/app/modules/pekan4/views/percobaan_pekan4_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -12,8 +12,15 @@ import '../modules/login/views/login_view.dart';
 import '../modules/pekan2/bindings/pekan2_binding.dart';
 import '../modules/pekan2/views/pekan2_view.dart';
 import '../modules/pekan3/bindings/pekan3_binding.dart';
-import '../modules/pekan3/views/pekan3_view.dart';
+import '../modules/pekan3/views/latihan_detail_view.dart';
+import '../modules/pekan3/views/latihan_view.dart';
 import '../modules/pekan3/views/pekan3_detail_view.dart';
+import '../modules/pekan3/views/pekan3_view.dart';
+import '../modules/pekan3/views/percobaan_detail_view.dart';
+import '../modules/pekan3/views/percobaan_part1_view.dart';
+import '../modules/pekan3/views/percobaan_view.dart';
+import '../modules/pekan4/bindings/pekan4_binding.dart';
+import '../modules/pekan4/views/pekan4_view.dart';
 
 part 'app_routes.dart';
 
@@ -39,8 +46,13 @@ class AppPages {
       binding: Pekan2Binding(),
     ),
     GetPage(
+      name: _Paths.PERCOBAAN_PEKAN3_PART1,
+      page: () => const PercobaanPart1View(),
+      binding: Pekan3Binding(),
+    ),
+    GetPage(
       name: _Paths.PEKAN3,
-      page: () => const Pekan3View(),
+      page: () => Pekan3View(),
       binding: Pekan3Binding(),
     ),
     GetPage(
@@ -68,5 +80,19 @@ class AppPages {
       page: () => LatihanPekan3Detail(),
       binding: Pekan3Binding(),
     ),
+    GetPage(
+      name: _Paths.PEKAN4,
+      page: () => const Pekan4View(),
+      binding: Pekan4Binding(),
+    ),
+    // GetPage(
+    //   name: _Paths.PEKAN4_DETAIL,
+    //   page: () => PercobaanDetailView(place: ,),
+    //   binding: Pekan4Binding(),
+    // ),
+    GetPage(
+        name: _Paths.PERCOBAAN_PEKAN4,
+        page: () => MainScreen(),
+        binding: Pekan4Binding()),
   ];
 }

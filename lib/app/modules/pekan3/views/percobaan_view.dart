@@ -19,7 +19,8 @@ class PercobaanPekan3 extends GetView<Pekan3Controller> {
         itemBuilder: (context, index) {
           final TourismPlace place = tourismPlaceList[index];
           return InkWell(
-            onTap: () => Get.toNamed('/percobaan-detail', arguments: place),
+            onTap: () {},
+            // => Get.toNamed('/percobaan-detail', arguments: place),
             child: listItem(place),
           );
         },

@@ -14,6 +14,10 @@ abstract class Routes {
   static const LATIHAN_PEKAN3 = _Paths.LATIHAN_PEKAN3;
   static const LATIHAN_PEKAN3_DETAIL =
       _Paths.LATIHAN_PEKAN3 + _Paths.LATIHAN_PEKAN3_DETAIL;
+  static const PERCOBAAN_PEKAN3_PART1 = _Paths.PERCOBAAN_PEKAN3_PART1;
+  static const PEKAN4 = _Paths.PEKAN4;
+  static const PEKAN4_DETAIL = _Paths.PEKAN4 + _Paths.PEKAN4_DETAIL;
+  static const PERCOBAAN_PEKAN4 = _Paths.PERCOBAAN_PEKAN4;
 }
 
 abstract class _Paths {
@@ -27,4 +31,8 @@ abstract class _Paths {
   static const PERCOBAAN_PEKAN3_DETAIL = '/percobaan-detail';
   static const LATIHAN_PEKAN3 = '/latihan-pekan3';
   static const LATIHAN_PEKAN3_DETAIL = '/latihan-detail';
+  static const PERCOBAAN_PEKAN3_PART1 = '/percobaan-pekan3-part1';
+  static const PEKAN4 = '/pekan4';
+  static const PERCOBAAN_PEKAN4 = '/percobaan-pekan4';
+  static const PEKAN4_DETAIL = '/detail4';
 }

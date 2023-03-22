@@ -7,6 +7,7 @@ import '../controllers/pekan3_controller.dart';
 
 class Pekan3View extends GetView<Pekan3Controller> {
   const Pekan3View({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,48 +19,15 @@ class Pekan3View extends GetView<Pekan3Controller> {
         itemCount: tourismPlaceList.length,
         itemBuilder: (context, index) {
           final TourismPlace place = tourismPlaceList[index];
-          return InkWell(
+          return Card(
+              child: ListTile(
+            leading: Image.asset(place.imageAsset),
+            title: Text(place.name),
+            subtitle: Text(place.rank),
             onTap: () => Get.toNamed('/detail', arguments: place),
-            child: listItem(place),
-          );
+          ));
         },
       ),
     );
   }
-}
-
-Widget listItem(TourismPlace place) {
-  return Card(
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          flex: 1,
-          child: Image.asset(place.imageAsset),
-        ),
-        Expanded(
-          flex: 2,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Text(
-                  place.name,
-                  style: const TextStyle(
-                    fontSize: 20,
-                  ),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text(place.rank),
-              ],
-            ),
-          ),
-        )
-      ],
-    ),
-  );
 }

@@ -19,50 +19,129 @@ class HomeView extends GetView<HomeController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  Get.toNamed('/pekan2');
-                },
-                child: const Text('Pekan 2'),
+              Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                child: const Text(
+                  'Bab 2 : Dart Basic',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 20, bottom: 20),
-                height: 1,
-                width: 200,
+                margin: const EdgeInsets.only(bottom: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.toNamed('/pekan2');
+                      },
+                      child: const Text('Pekan 2'),
+                    ),
+                  ],
+                ),
+              ),
+              const Divider(
+                height: 20,
                 color: Colors.black,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Get.toNamed('/percobaan-pekan3');
-                    },
-                    child: const Text('Percobaan'),
+              Container(
+                margin: const EdgeInsets.only(bottom: 10),
+                child: const Text(
+                  'Bab 3 : Flutter Layout',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
-                  Container(
-                    height: 35,
-                    width: 1,
-                    color: Colors.black,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.toNamed('/percobaan-pekan3');
+                      },
+                      child: const Text('Percobaan'),
+                    ),
+                    const VerticalDivider(
+                      width: 10,
+                      color: Colors.black,
+                      thickness: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.toNamed('/latihan-pekan3');
+                      },
+                      child: const Text('Latihan'),
+                    ),
+                    const VerticalDivider(
+                      width: 10,
+                      color: Colors.black,
+                      thickness: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.toNamed('/pekan3');
+                      },
+                      child: const Text('Tugas'),
+                    ),
+                  ],
+                ),
+              ),
+              const Divider(
+                height: 20,
+                color: Colors.black,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                child: const Text(
+                  'Bab 4 : State Management',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Get.toNamed('/latihan-pekan3');
-                    },
-                    child: const Text('Latihan'),
-                  ),
-                  Container(
-                    height: 35,
-                    width: 1,
-                    color: Colors.black,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Get.toNamed('/pekan3');
-                    },
-                    child: const Text('Tugas'),
-                  ),
-                ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.toNamed('/percobaan-pekan4');
+                      },
+                      child: const Text('Percobaan'),
+                    ),
+                    const VerticalDivider(
+                      width: 10,
+                      color: Colors.black,
+                      thickness: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        // Get.toNamed('/latihan-pekan4');
+                      },
+                      child: const Text('Latihan'),
+                    ),
+                    const VerticalDivider(
+                      width: 10,
+                      color: Colors.black,
+                      thickness: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.toNamed('/pekan4');
+                      },
+                      child: const Text('Tugas'),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
