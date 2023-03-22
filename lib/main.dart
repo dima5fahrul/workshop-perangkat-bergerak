@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project_workshop/main_screen.dart';
+import 'package:project_workshop/provider/done_tourism_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +13,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (context) => DoneTourismeProvider(),
+      child: MaterialApp(
+        title: 'Contacts',
+        theme: ThemeData(),
+        debugShowCheckedModeBanner: false,
+        home: const MainScreen(),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -39,7 +44,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 1;
+  int _counter = 0;
   String _text = 'Ganjil';
 
   void _incrementCounter() {
@@ -47,11 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // Incrementing counter
       _counter++;
       if (_counter > 20) {
-        _counter = 1;
+        _counter = 0;
       }
 
       // Menampilkan bilangan ganjil
-      // _text = 'Ganjil: ';
+      _text = 'Ganjil: ';
       // for (int i = 0; i <= _counter; i++) {
       //   if (i % 2 == 0) {
       //     _text += '$i, ';
@@ -59,22 +64,22 @@ class _MyHomePageState extends State<MyHomePage> {
       // }
 
       // Menampilkan bilangan genap kelipatan 3
-      // _text = 'Genap: ';
-      // for (int i = 0; i <= _counter; i += 3) {
-      //   if (i % 2 == 0) {
-      //     _text += '$i, ';
-      //   }
-      // }
-
-      // Menampilkan bilangan prima
-      _text = 'Prima: ';
-      for (int i = 0; i <= _counter; i++) {
-        if (i == 1 || i == 2) {
-          _text += '$i, ';
-        } else if (i % 2 != 0) {
+      _text = 'Genap: ';
+      for (int i = 0; i <= _counter; i += 3) {
+        if (i % 2 == 0) {
           _text += '$i, ';
         }
       }
+
+      // Menampilkan bilangan prima
+      // _text = 'Prima: ';
+      // for (int i = 2; i <= _counter; i++) {
+      //   if (i == 2) {
+      //     _text += '$i, ';
+      //   } else if (i % 2 != 0) {
+      //     _text += '$i, ';
+      //   }
+      // }
     });
   }
 
